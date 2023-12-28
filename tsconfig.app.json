@@ -3,12 +3,17 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": ["@angular/localize"],
+    // Update this part
+    "paths": {
+      "app/*": ["./src/app/*"],
+      "config/*": ["./src/app/_config/*"],
+      "environment/*": ["./src/environments/*"],
+      "shared/*": ["./src/app/_shared/*"],
+      "helpers/*": ["./src/helpers/*"],
+      "tests/*": ["./src/tests/*"]
+    }
   },
-  "files": [
-    "src/main.ts"
-  ],
-  "include": [
-    "src/**/*.d.ts"
-  ]
+  "files": ["src/main.ts"],
+  "include": ["src/**/*.d.ts"]
 }
