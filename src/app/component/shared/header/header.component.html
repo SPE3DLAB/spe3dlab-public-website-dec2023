@@ -1,0 +1,61 @@
+<header class="header-wrapper container">
+  <div class="row py-3 mb-1 bg-transparent">
+    <div
+      class="col-12 col-md-6 header-logo-image-wrapper container bg-transparent d-flex justify-content-center justify-content-md-start"
+    >
+      <a routerLink="" class="text-decoration-none text-black bg-transparent">
+        <img
+          class="header-logo-image"
+          src="./../../../../assets/images/header/header-logo.png"
+          alt="header-logo"
+        />
+      </a>
+    </div>
+    <div
+      class="col-12 col-md-6 container text-black d-flex gap-3 justify-content-center justify-content-md-end mt-2 mt-md-0 bg-transparent"
+    >
+      <div class="d-flex gap-3 align-items-center bg-transparent">
+        <div
+          class="nav-item text-black text-decoration-none cursor-pointer bg-transparent"
+          routerLink="about-us"
+          i18n="@@about_us"
+        >
+          A propos de Merchmgt
+        </div>
+        <a
+          class="nav-item text-black text-decoration-none bg-transparent"
+          routerLink="pricing"
+          i18n="@@pricing"
+        >
+          Prix
+        </a>
+        <a
+          class="nav-item text-black text-decoration-none"
+          routerLink="legal-notice"
+          i18n="@@legal_notice"
+        >
+          Mention légale
+        </a>
+      </div>
+      <div class="d-flex gap-2 gap-md-3 align-items-center bg-transparent">
+        <div *ngFor="let language of languages" class="nav-item bg-transparent">
+          <a
+            class="nav-item text-black text-decoration-none d-flex align-items-center gap-1 bg-transparent"
+            [href]="language.url"
+          >
+            <img
+              [src]="language.icon"
+              [title]="'language-' + language.label"
+              [alt]="'language-' + language.label"
+              width="16"
+              height="11"
+            />
+            <span class="d-none d-lg-block ms-1 bg-transparent">
+              {{ language.label }}
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,48 @@
+@import "../../../../styles.scss";
+
+header {
+  background-image: url("/assets/images/header/header-background.png");
+  background-size: cover;
+  background-color: transparent;
+}
+
+.header-logo-image-wrapper {
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.header-logo-image {
+  max-width: 350px;
+}
+
+.activating,
+.nav-item:hover {
+  color: $lightGreen !important;
+}
+
+.nav-item {
+  display: inline-block;
+  position: relative;
+  text-wrap: nowrap;
+}
+
+.nav-item:last-child {
+  margin-right: 0;
+}
+
+.nav-item:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 2px;
+  width: 0px;
+  background: transparent;
+  transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: $lightGreen;
+}

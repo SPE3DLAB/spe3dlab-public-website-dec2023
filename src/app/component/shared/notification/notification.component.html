@@ -1,0 +1,24 @@
+<div [ngClass]="['p-3', notificationOption.position]">
+  <div class="toast fade" [ngClass]="openNotification ? 'show' : 'hide'">
+    <div class="toast-header">
+      <div
+        class="notification-status rounded bg-primary"
+        [ngClass]="['bg-' + notificationOption.type]"
+      ></div>
+      <strong
+        class="me-auto"
+        [ngClass]="['text-' + notificationOption.type]"
+        [innerHTML]="notificationOption.title"
+      ></strong>
+      <button
+        *ngIf="notificationOption.closable"
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="toast"
+        aria-label="Close"
+        (click)="onClose()"
+      ></button>
+    </div>
+    <div class="toast-body" [innerHTML]="notificationOption.content"></div>
+  </div>
+</div>
