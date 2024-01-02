@@ -1,18 +1,63 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TranslationService } from './module/translation/service/translation.service';
+import { NotificationService } from './service/notification.service';
+import { HomePageComponent } from './component/page/home-page/home-page.component';
+import { HeaderComponent } from './component/shared/header/header.component';
+import { LegalNoticePageComponent } from './component/page/legal-notice-page/legal-notice-page.component';
+import { AboutUsComponent } from './component/page/about-us/about-us.component';
+import { ContactUsComponent } from './component/shared/contact-us/contact-us.component';
+import { FooterComponent } from './component/shared/footer/footer.component';
+import { NotificationComponent } from './component/shared/notification/notification.component';
+import { OtherTranslationsComponent } from './component/shared/other-translations/other-translations.component';
+
+export function translationServiceFactory(
+  translationService: TranslationService
+) {
+  return () => translationService.loadTranslations();
+}
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomePageComponent,
+    HeaderComponent,
+    LegalNoticePageComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    FooterComponent,
+    NotificationComponent,
+    OtherTranslationsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    NotificationService,
+    TranslationService,
+    {
+      provide: LOCALE_ID,
+      useValue: environment.defaultLanguage,
+    },
+    {
+      provide: APP_INITIALIZER,
+      useFactory: translationServiceFactory,
+      deps: [TranslationService],
+      multi: true,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

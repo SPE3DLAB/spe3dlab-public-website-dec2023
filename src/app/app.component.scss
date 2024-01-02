@@ -1,0 +1,24 @@
+.layout-wrapper {
+  padding: 0 5%;
+  display: flex;
+  gap: 5%;
+}
+
+.router {
+  border: 1px solid green;
+  background-color: lightgreen;
+  width: 72.5%;
+}
+
+.side-bar {
+  border: 1px solid blue;
+  background-color: lightblue;
+  width: 22.5%;
+
+  padding-top: 1.5rem;
+  border-top: 4px solid #1a1a1a;
+
+  .title {
+    margin-bottom: 1.25rem;
+  }
+}

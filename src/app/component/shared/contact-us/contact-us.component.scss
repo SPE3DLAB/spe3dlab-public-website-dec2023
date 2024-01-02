@@ -1,0 +1,24 @@
+@import "../../../../styles.scss";
+
+.content-title {
+  margin-bottom: 20px;
+  width: 100%;
+  border-bottom: 5px solid $black;
+}
+
+.contact-form-content {
+  color: var(--text-color);
+  input,
+  textarea {
+    border: 1px solid $grayBorder;
+  }
+}
+
+.form-extra-information {
+  color: $darkRed;
+}
+
+.button-contact-form {
+  background-color: $grayText;
+  color: $white;
+}
