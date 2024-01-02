@@ -1,0 +1,11 @@
+<article class="container">
+  <div class="row">
+    <a
+      *ngFor="let partner of partners"
+      [href]="partner.routerLink"
+      [ngClass]="partner.class"
+    >
+      <img [src]="partner.imageSrc" [alt]="partner.imageName" />
+    </a>
+  </div>
+</article>

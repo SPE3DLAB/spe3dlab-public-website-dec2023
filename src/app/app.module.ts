@@ -17,6 +17,7 @@ import { ContactUsComponent } from './component/shared/contact-us/contact-us.com
 import { FooterComponent } from './component/shared/footer/footer.component';
 import { NotificationComponent } from './component/shared/notification/notification.component';
 import { OtherTranslationsComponent } from './component/shared/other-translations/other-translations.component';
+import { PartnersComponent } from './component/shared/partners/partners.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -35,6 +36,7 @@ export function translationServiceFactory(
     FooterComponent,
     NotificationComponent,
     OtherTranslationsComponent,
+    PartnersComponent,
   ],
   imports: [
     BrowserModule,
