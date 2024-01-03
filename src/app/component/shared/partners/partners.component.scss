@@ -1,3 +1,10 @@
+@import "./../../../../styles.scss";
+
+article {
+  border-top: 1px solid $grayBorder;
+  border-bottom: 1px solid $grayBorder;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -5,6 +12,6 @@ a {
 
 img {
   width: 100%;
-  height: 100%;
+  height: 100px;
   object-fit: contain;
 }

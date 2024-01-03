@@ -1,6 +1,7 @@
 <article class="container">
-  <div class="row">
+  <div class="row py-3">
     <a
+      class="d-flex justify-content-center align-items-center"
       *ngFor="let partner of partners"
       [href]="partner.routerLink"
       [ngClass]="partner.class"

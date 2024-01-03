@@ -18,6 +18,7 @@ import { FooterComponent } from './component/shared/footer/footer.component';
 import { NotificationComponent } from './component/shared/notification/notification.component';
 import { OtherTranslationsComponent } from './component/shared/other-translations/other-translations.component';
 import { PartnersComponent } from './component/shared/partners/partners.component';
+import { DemoVideoComponent } from './component/shared/demo-video/demo-video.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -37,6 +38,7 @@ export function translationServiceFactory(
     NotificationComponent,
     OtherTranslationsComponent,
     PartnersComponent,
+    DemoVideoComponent,
   ],
   imports: [
     BrowserModule,
