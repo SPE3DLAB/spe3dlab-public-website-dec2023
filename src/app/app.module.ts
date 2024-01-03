@@ -19,6 +19,8 @@ import { NotificationComponent } from './component/shared/notification/notificat
 import { OtherTranslationsComponent } from './component/shared/other-translations/other-translations.component';
 import { PartnersComponent } from './component/shared/partners/partners.component';
 import { DemoVideoComponent } from './component/shared/demo-video/demo-video.component';
+import { FeatureOverviewComponent } from './component/shared/feature-overview/feature-overview.component';
+import { ImageWithTextWrapComponent } from './component/shared/image-with-text-wrap/image-with-text-wrap.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -39,6 +41,8 @@ export function translationServiceFactory(
     OtherTranslationsComponent,
     PartnersComponent,
     DemoVideoComponent,
+    FeatureOverviewComponent,
+    ImageWithTextWrapComponent,
   ],
   imports: [
     BrowserModule,

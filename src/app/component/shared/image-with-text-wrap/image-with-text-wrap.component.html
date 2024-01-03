@@ -1,0 +1,13 @@
+<div class="row p-4">
+  <div class="clearfix">
+    <img
+      [src]="imageSource"
+      class="col-12 col-md-5 float-md-start mb-3 me-4"
+      [alt]="imageName"
+    />
+
+    <h1>{{ title }}</h1>
+
+    <ng-content></ng-content>
+  </div>
+</div>

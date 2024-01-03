@@ -1,0 +1,13 @@
+@import "../../../../styles.scss";
+
+.content-title {
+  margin-bottom: 20px;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 5px solid $black;
+}
+
+.feature-intergrate-example-image {
+  max-width: 300px;
+  object-fit: contain;
+}
