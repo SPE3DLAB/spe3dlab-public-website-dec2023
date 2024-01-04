@@ -13,10 +13,35 @@
   <div
     class="col-12 col-md-9 col-lg-12 col-xl-9 container text-black d-flex gap-3 justify-content-center justify-content-md-end mt-2 mt-xl-0 bg-transparent"
   >
-    <div class="d-flex gap-3 justify-content-center">
+    <div
+      class="d-flex flex-column flex-sm-row gap-2 gap-sm-3 align-items-center bg-transparent"
+    >
+      <a
+        class="navigate-item text-black text-decoration-none cursor-pointer bg-transparent"
+        routerLink="publications"
+        i18n="@@publications"
+      >
+        Publications
+      </a>
+      <a
+        class="navigate-item text-black text-decoration-none bg-transparent"
+        routerLink="events-and-press"
+        i18n="@@event_and_press"
+      >
+        Events & press
+      </a>
+      <a
+        class="navigate-item text-black text-decoration-none"
+        routerLink="legal-notice"
+        i18n="@@partners"
+      >
+        Partners
+      </a>
+    </div>
+
+    <!-- <div class="d-flex gap-3 justify-content-center">
       <nav class="navbar navbar-expand-lg navbar-light mt-3 mt-lg-0">
         <div class="container-fluid">
-          <!-- This div stay here to push button to the right -->
           <div></div>
           <button
             class="navbar-toggler"
@@ -32,27 +57,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" routerLink="about-us">
-                  Features and roadmap
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink="about-us"> Download </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink=""> Project and use cases </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" routerLink="legal-notice"> Publications </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" routerLink="events"> Events & press</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" routerLink="legal-notice"> Partners </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink=""> Press </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" routerLink=""> Contact </a>
               </li>
               <li *ngFor="let language of languages" class="nav-item">
                 <a
@@ -75,6 +86,6 @@
           </div>
         </div>
       </nav>
-    </div>
+    </div> -->
   </div>
 </header>

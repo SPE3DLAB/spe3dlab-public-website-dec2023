@@ -1,14 +1,19 @@
-<article class="demo-video-and-contact-form-wrapper">
-  <h2 class="content-title">Features overview video</h2>
-  <div class="youtube-video-container">
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/j1sVFewmDmo?si=2XzDCobFDrVspcvx"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowfullscreen
-    ></iframe>
+<article class="container demo-video-and-contact-form-wrapper">
+  <div class="row gy-3">
+    <div class="col-12 col-lg-7 d-flex flex-column demo-video-wrapper">
+      <h2 class="content-title" i18n="@@demo_video_title">Démo vidéo</h2>
+      <div class="youtube-video-container">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/j1sVFewmDmo?si=2XzDCobFDrVspcvx"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+    <app-contact-us class="col-12 col-lg-5"></app-contact-us>
   </div>
 </article>
