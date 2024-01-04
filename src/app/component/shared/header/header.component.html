@@ -1,7 +1,6 @@
-<!-- TODO: use https://getbootstrap.com/docs/5.0/components/navbar/#responsive-behaviors -->
 <header class="header-wrapper row">
   <div
-    class="col-12 col-md-3 header-logo-image-wrapper container bg-transparent d-flex justify-content-center justify-content-md-start"
+    class="col-12 col-md-3 col-lg-12 col-xl-3 header-logo-image-wrapper container bg-transparent d-flex justify-content-center justify-content-md-start"
   >
     <a routerLink="" class="text-decoration-none text-black bg-transparent">
       <img
@@ -12,95 +11,70 @@
     </a>
   </div>
   <div
-    class="col-12 col-md-9 container text-black d-flex gap-3 justify-content-center justify-content-md-end mt-2 mt-md-0 bg-transparent"
+    class="col-12 col-md-9 col-lg-12 col-xl-9 container text-black d-flex gap-3 justify-content-center justify-content-md-end mt-2 mt-xl-0 bg-transparent"
   >
     <div class="d-flex gap-3 justify-content-center">
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink="about-us"
-      >
-        Features and roadmap
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink="about-us"
-      >
-        Download
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink=""
-      >
-        Project and use cases
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink=""
-      >
-        Project and use cases
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink="legal-notice"
-      >
-        Publications
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink="legal-notice"
-      >
-        Partners
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink=""
-      >
-        Press
-      </a>
-      <a
-        class="nav-item text-black text-decoration-none d-flex justify-content-center align-items-center text-center"
-        routerLink=""
-      >
-        Contact
-      </a>
-      <a
-        *ngFor="let language of languages"
-        class="nav-item text-black text-decoration-none d-flex align-items-center gap-1"
-        [href]="language.url"
-      >
-        <img
-          [src]="language.icon"
-          [title]="'language-' + language.label"
-          [alt]="'language-' + language.label"
-          width="20"
-          height="15"
-        />
-        <span class="d-none d-lg-block">
-          {{ language.label }}
-        </span>
-      </a>
+      <nav class="navbar navbar-expand-lg navbar-light mt-3 mt-lg-0">
+        <div class="container-fluid">
+          <!-- This div stay here to push button to the right -->
+          <div></div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="about-us">
+                  Features and roadmap
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="about-us"> Download </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink=""> Project and use cases </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="legal-notice"> Publications </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="legal-notice"> Partners </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink=""> Press </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink=""> Contact </a>
+              </li>
+              <li *ngFor="let language of languages" class="nav-item">
+                <a
+                  class="nav-link text-black text-decoration-none d-flex align-items-center gap-1"
+                  [href]="language.url"
+                >
+                  <img
+                    [src]="language.icon"
+                    [title]="'language-' + language.label"
+                    [alt]="'language-' + language.label"
+                    width="20"
+                    height="15"
+                  />
+                  <span class="">
+                    {{ language.label }}
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </div>
   </div>
-  <!-- Put this on top rigt instead in side -->
-  <!-- <div
-    class="language-wrapper d-flex gap-2 gap-md-3 align-items-center bg-transparent"
-  >
-    <div *ngFor="let language of languages" class="bg-transparent">
-      <a
-        class="text-black text-decoration-none d-flex align-items-center gap-1 bg-transparent"
-        [href]="language.url"
-      >
-        <img
-          [src]="language.icon"
-          [title]="'language-' + language.label"
-          [alt]="'language-' + language.label"
-          width="20"
-          height="15"
-        />
-        <span class="d-none d-lg-block bg-transparent">
-          {{ language.label }}
-        </span>
-      </a>
-    </div>
-  </div> -->
 </header>
