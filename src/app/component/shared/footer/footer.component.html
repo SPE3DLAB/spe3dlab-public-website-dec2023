@@ -1,1 +1,33 @@
-<article class="footer-wrapper text-end">v{{ version }}</article>
+<article class="footer-wrapper text-end text-md-start">
+  <div class="p-3 border-top">
+    <div class="d-flex flex-wrap gap-3 gap-md-0">
+      <div class="d-flex flex-column col-12 col-md-4">
+        <a routerLink="" class="mb-3 pt-2">
+          <img
+            src="./../../../../assets/images/header/header-logo.png"
+            alt="Tekliko"
+            class=""
+          />
+        </a>
+        <a
+          routerLink=""
+          class="d-block cursor-pointer text-decoration-none text-dark"
+          i18n="@@welcome"
+          >SPE3DLab, Speed-up your data analysis, Big Data</a
+        >
+        <a
+          [routerLink]="['/legal-notice']"
+          class="d-block cursor-pointer text-decoration-none text-dark"
+          i18n="@@legal_notice"
+          >Mentions légales</a
+        >
+        <a
+          href="http://www.speedlab.io/sitemap_index.xml"
+          class="d-block cursor-pointer text-decoration-none text-dark"
+          >Site map</a
+        >
+        <div class="text-secondary">V{{ version }}</div>
+      </div>
+    </div>
+  </div>
+</article>

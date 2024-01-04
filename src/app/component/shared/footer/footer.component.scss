@@ -1,8 +1,11 @@
 @import "../../../../styles.scss";
 
 .footer-wrapper {
-  background-color: transparent;
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  background-color: $white;
+}
+
+img {
+  width: 200px;
+  height: 100%;
+  object-fit: contain;
 }
