@@ -1,0 +1,12 @@
+@import "src/styles.scss";
+
+.content-title {
+  // margin-bottom: 20px;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 5px solid $black;
+}
+
+.event-date {
+  color: #686868;
+}

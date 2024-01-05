@@ -1,22 +1,75 @@
-<div class="row p-4">
-  <div class="clearfix">
+<h2 *ngIf="title" class="mb-4">{{ title }}</h2>
+<div class="row g-5">
+  <div
+    class="col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center"
+    [ngClass]="swapTextAndImage ? 'order-2' : 'order-1'"
+  >
     <img
-      *ngIf="!swapTextAndImage"
+      *ngIf="imageSource"
       [src]="imageSource"
-      class="col-12 col-md-5 float-md-start mb-3 me-5"
       [alt]="imageName"
-      [ngStyle]="{ height: imageHeight, width: imageWidth }"
+      [ngStyle]="{ maxHeight: imageHeight, maxWidth: imageWidth }"
+      [ngClass]="imageWrapperClass"
     />
 
-    <img
-      *ngIf="swapTextAndImage"
-      [src]="imageSource"
-      class="col-12 col-md-5 float-md-end mb-3 ms-5"
-      [alt]="imageName"
-      [ngStyle]="{ height: imageHeight, width: imageWidth }"
-    />
-
-    <h2>{{ title }}</h2>
+    <div
+      *ngIf="imageSources.length > 0"
+      id="carouselImageWithTextWrap"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          *ngFor="let itemImageSource of imageSources; index as index"
+          type="button"
+          data-bs-target="#carouselImageWithTextWrap"
+          [attr.data-bs-slide-to]="index"
+          [class]="index == 0 ? 'active' : ''"
+          [attr.aria-current]="index == 0 ? 'true' : null"
+          [attr.aria-label]="'Slide ' + index"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div
+          *ngFor="let itemImageSource of imageSources; index as index"
+          class="carousel-item"
+          data-bs-interval="5000"
+          [ngClass]="index == 0 ? 'active' : ''"
+        >
+          <img
+            [src]="itemImageSource.imageSource"
+            class="d-block w-100"
+            [alt]="itemImageSource.imageName"
+            [ngStyle]="{ maxHeight: imageHeight, maxWidth: imageWidth }"
+            [ngClass]="imageWrapperClass"
+          />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselImageWithTextWrap"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselImageWithTextWrap"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+  <div
+    class="col-12 col-md-7 col-lg-9"
+    [ngClass]="swapTextAndImage ? 'order-1' : 'order-2'"
+  >
+    <h2>{{ subTitle }}</h2>
 
     <ng-content></ng-content>
   </div>

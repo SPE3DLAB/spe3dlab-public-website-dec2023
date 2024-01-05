@@ -21,6 +21,7 @@ import { FeatureOverviewComponent } from './component/shared/feature-overview/fe
 import { ImageWithTextWrapComponent } from './component/shared/image-with-text-wrap/image-with-text-wrap.component';
 import { PartnersPageComponent } from './component/page/partners-page/partners-page.component';
 import { PublicationsComponent } from './component/page/publications/publications.component';
+import { EventsAndPressComponent } from './component/page/events-and-press/events-and-press.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -44,6 +45,7 @@ export function translationServiceFactory(
     PartnersComponent,
     PartnersPageComponent,
     PublicationsComponent,
+    EventsAndPressComponent,
   ],
   imports: [
     BrowserModule,

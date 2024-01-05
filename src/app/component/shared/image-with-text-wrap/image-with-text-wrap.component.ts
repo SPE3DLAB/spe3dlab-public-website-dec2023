@@ -7,7 +7,10 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 })
 export class ImageWithTextWrapComponent {
   @Input() title: string = '';
+  @Input() subTitle: string = '';
+  @Input() imageWrapperClass: string = '';
   @Input() imageSource: string = '';
+  @Input() imageSources: { imageSource: string; imageName: string }[] = [];
   @Input() imageName: string = '';
   @Input() imageHeight: string = '300px';
   @Input() imageWidth: string = 'auto';
