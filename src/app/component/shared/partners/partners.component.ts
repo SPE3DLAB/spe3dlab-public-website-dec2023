@@ -17,39 +17,37 @@ export class PartnersComponent {
     {
       routerLink: 'partners',
       class: 'col-2 p-3',
-      imageSrc: './../../../assets/images/partners/partner-latim-logo.gif',
+      imageSrc: '/assets/images/partners/partner-latim-logo.gif',
       imageName: 'latim-logo',
     },
     {
       routerLink: 'partners',
       class: 'col-2',
-      imageSrc: './../../../../assets/images/partners/partner-chu-logo.jpeg',
+      imageSrc: '/assets/images/partners/partner-chu-logo.jpeg',
       imageName: 'chu-logo',
     },
     {
       routerLink: 'partners',
       class: 'col-2 p-3',
-      imageSrc: './../../../assets/images/partners/partner-iris-logo.png',
+      imageSrc: '/assets/images/partners/partner-iris-logo.png',
       imageName: 'iris-logo',
     },
     {
       routerLink: 'partners',
       class: 'col-2',
-      imageSrc:
-        './../../../assets/images/partners/partner-saint-denis-logo.png',
+      imageSrc: '/assets/images/partners/partner-saint-denis-logo.png',
       imageName: 'saint-denis-logo',
     },
     {
       routerLink: 'partners',
       class: 'col-2',
-      imageSrc:
-        './../../../assets/images/partners/partner-french-tech-logo.jpg',
+      imageSrc: '/assets/images/partners/partner-french-tech-logo.jpg',
       imageName: 'french-tech-logo',
     },
     {
       routerLink: 'partners',
       class: 'col-2',
-      imageSrc: './../../../assets/images/partners/partner-systematic-logo.png',
+      imageSrc: '/assets/images/partners/partner-systematic-logo.png',
       imageName: 'systematic-logo',
     },
   ];

@@ -7,7 +7,11 @@
   border-bottom: 5px solid $black;
 }
 
-.feature-intergrate-example-image {
-  max-width: 300px;
-  object-fit: contain;
+li {
+  font-family: Merriweather;
+  font-size: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }

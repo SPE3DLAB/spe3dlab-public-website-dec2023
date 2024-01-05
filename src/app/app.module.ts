@@ -20,6 +20,7 @@ import { DemoVideoComponent } from './component/shared/demo-video/demo-video.com
 import { FeatureOverviewComponent } from './component/shared/feature-overview/feature-overview.component';
 import { ImageWithTextWrapComponent } from './component/shared/image-with-text-wrap/image-with-text-wrap.component';
 import { PartnersPageComponent } from './component/page/partners-page/partners-page.component';
+import { PublicationsComponent } from './component/page/publications/publications.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -42,6 +43,7 @@ export function translationServiceFactory(
     ImageWithTextWrapComponent,
     PartnersComponent,
     PartnersPageComponent,
+    PublicationsComponent,
   ],
   imports: [
     BrowserModule,

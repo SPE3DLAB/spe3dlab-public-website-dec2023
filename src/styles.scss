@@ -50,6 +50,11 @@ $darkGray: #555;
   font-weight: 500;
 }
 
+@font-face {
+  font-family: Merriweather;
+  src: url(./assets/fonts/merriweather/Merriweather-Regular.ttf);
+}
+
 // Extra classnames
 .cursor-pointer {
   cursor: pointer;
