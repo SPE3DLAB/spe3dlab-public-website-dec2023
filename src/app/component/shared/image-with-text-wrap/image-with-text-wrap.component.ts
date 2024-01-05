@@ -9,4 +9,7 @@ export class ImageWithTextWrapComponent {
   @Input() title: string = '';
   @Input() imageSource: string = '';
   @Input() imageName: string = '';
+  @Input() imageHeight: string = '300px';
+  @Input() imageWidth: string = 'auto';
+  @Input() swapTextAndImage: boolean = false;
 }

@@ -1,12 +1,22 @@
 <div class="row p-4">
   <div class="clearfix">
     <img
+      *ngIf="!swapTextAndImage"
       [src]="imageSource"
-      class="col-12 col-md-5 float-md-start mb-3 me-4"
+      class="col-12 col-md-5 float-md-start mb-3 me-5"
       [alt]="imageName"
+      [ngStyle]="{ height: imageHeight, width: imageWidth }"
     />
 
-    <h1>{{ title }}</h1>
+    <img
+      *ngIf="swapTextAndImage"
+      [src]="imageSource"
+      class="col-12 col-md-5 float-md-end mb-3 ms-5"
+      [alt]="imageName"
+      [ngStyle]="{ height: imageHeight, width: imageWidth }"
+    />
+
+    <h2>{{ title }}</h2>
 
     <ng-content></ng-content>
   </div>

@@ -11,8 +11,6 @@ import { TranslationService } from './module/translation/service/translation.ser
 import { NotificationService } from './service/notification.service';
 import { HomePageComponent } from './component/page/home-page/home-page.component';
 import { HeaderComponent } from './component/shared/header/header.component';
-import { LegalNoticePageComponent } from './component/page/legal-notice-page/legal-notice-page.component';
-import { AboutUsComponent } from './component/page/about-us/about-us.component';
 import { ContactUsComponent } from './component/shared/contact-us/contact-us.component';
 import { FooterComponent } from './component/shared/footer/footer.component';
 import { NotificationComponent } from './component/shared/notification/notification.component';
@@ -21,6 +19,7 @@ import { PartnersComponent } from './component/shared/partners/partners.componen
 import { DemoVideoComponent } from './component/shared/demo-video/demo-video.component';
 import { FeatureOverviewComponent } from './component/shared/feature-overview/feature-overview.component';
 import { ImageWithTextWrapComponent } from './component/shared/image-with-text-wrap/image-with-text-wrap.component';
+import { PartnersPageComponent } from './component/page/partners-page/partners-page.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -33,8 +32,6 @@ export function translationServiceFactory(
     AppComponent,
     HomePageComponent,
     HeaderComponent,
-    LegalNoticePageComponent,
-    AboutUsComponent,
     ContactUsComponent,
     FooterComponent,
     NotificationComponent,
@@ -43,6 +40,8 @@ export function translationServiceFactory(
     DemoVideoComponent,
     FeatureOverviewComponent,
     ImageWithTextWrapComponent,
+    PartnersComponent,
+    PartnersPageComponent,
   ],
   imports: [
     BrowserModule,
