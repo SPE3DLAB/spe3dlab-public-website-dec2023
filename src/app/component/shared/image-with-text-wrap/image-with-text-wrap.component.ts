@@ -11,6 +11,7 @@ export class ImageWithTextWrapComponent {
   @Input() imageWrapperClass: string = '';
   @Input() imageSource: string = '';
   @Input() imageSources: { imageSource: string; imageName: string }[] = [];
+  @Input() carouselId: string = '';
   @Input() imageName: string = '';
   @Input() imageHeight: string = '300px';
   @Input() imageWidth: string = 'auto';

@@ -14,7 +14,7 @@
 
     <div
       *ngIf="imageSources.length > 0"
-      id="carouselImageWithTextWrap"
+      [id]="carouselId"
       class="carousel slide"
       data-bs-ride="carousel"
     >
@@ -22,7 +22,7 @@
         <button
           *ngFor="let itemImageSource of imageSources; index as index"
           type="button"
-          data-bs-target="#carouselImageWithTextWrap"
+          [attr.data-bs-target]="'#' + carouselId"
           [attr.data-bs-slide-to]="index"
           [class]="index == 0 ? 'active' : ''"
           [attr.aria-current]="index == 0 ? 'true' : null"
@@ -48,7 +48,7 @@
       <button
         class="carousel-control-prev"
         type="button"
-        data-bs-target="#carouselImageWithTextWrap"
+        [attr.data-bs-target]="'#' + carouselId"
         data-bs-slide="prev"
       >
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -57,7 +57,7 @@
       <button
         class="carousel-control-next"
         type="button"
-        data-bs-target="#carouselImageWithTextWrap"
+        [attr.data-bs-target]="'#' + carouselId"
         data-bs-slide="next"
       >
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
