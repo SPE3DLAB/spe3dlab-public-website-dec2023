@@ -1,14 +1,15 @@
 <h2 *ngIf="title" class="mb-4">{{ title }}</h2>
 <div class="row g-5">
   <div
-    class="col-12 col-md-5 col-lg-3 d-flex justify-content-center align-items-center"
+    class="d-flex justify-content-center align-items-center"
+    [class]="forceImageOnTop ? 'col-12 ' : 'col-12 col-md-5 col-lg-3'"
     [ngClass]="swapTextAndImage ? 'order-2' : 'order-1'"
   >
     <img
       *ngIf="imageSource"
       [src]="imageSource"
       [alt]="imageName"
-      [ngStyle]="{ maxHeight: imageHeight, maxWidth: imageWidth }"
+      [ngStyle]="{ height: imageHeight, width: imageWidth }"
       [ngClass]="imageWrapperClass"
     />
 
@@ -66,7 +67,7 @@
     </div>
   </div>
   <div
-    class="col-12 col-md-7 col-lg-9"
+    [class]="forceImageOnTop ? 'col-12 ' : 'col-12 col-md-7 col-lg-9'"
     [ngClass]="swapTextAndImage ? 'order-1' : 'order-2'"
   >
     <h2>{{ subTitle }}</h2>

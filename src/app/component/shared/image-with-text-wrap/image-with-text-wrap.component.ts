@@ -16,4 +16,5 @@ export class ImageWithTextWrapComponent {
   @Input() imageHeight: string = '300px';
   @Input() imageWidth: string = 'auto';
   @Input() swapTextAndImage: boolean = false;
+  @Input() forceImageOnTop: boolean = false;
 }
