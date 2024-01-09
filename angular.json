@@ -6,9 +6,9 @@
     "speedlab-public-website": {
       "projectType": "application",
       "i18n": {
-        "sourceLocale": "fr",
+        "sourceLocale": "en",
         "locales": {
-          "en": "src/assets/translation/messages.en.xlf"
+          "fr": "src/assets/translation/messages.fr.xlf"
         }
       },
       "schematics": {
