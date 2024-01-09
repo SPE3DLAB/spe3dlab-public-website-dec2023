@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
-  <file source-language="en" datatype="plaintext" original="ng2.template">
+  <file source-language="fr" datatype="plaintext" original="ng2.template">
     <body>
+      <body>
       <trans-unit id="language_fr" datatype="html">
         <source>Français</source>
         <context-group purpose="location">
@@ -16,6 +17,7 @@
           <context context-type="linenumber">54</context>
         </context-group>
       </trans-unit>
+    </body>
     </body>
   </file>
 </xliff>
