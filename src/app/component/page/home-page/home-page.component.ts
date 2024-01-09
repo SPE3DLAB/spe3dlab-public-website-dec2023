@@ -10,7 +10,7 @@ export class HomePageComponent {
 
   ngOnInit() {
     this.titleService.setTitle(
-      'Easy-to-use open-source data analysis tool for questioning structured and unstructured data -  '
+      'SPE3DLab - Easy-to-use open-source data analysis tool for questioning structured and unstructured data'
     );
 
     this.metaTagService.addTags([
