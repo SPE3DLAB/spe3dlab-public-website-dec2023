@@ -1,12 +1,10 @@
 <div class="contact-form-wrapper">
   <div class="contact-form" [formGroup]="contactForm">
-    <h2 class="content-title" i18n="@@contact_form_title">Nous contacter</h2>
+    <h2 class="content-title">Contact us</h2>
 
     <div class="d-grid gap-2 contact-form-content">
       <div class="d-block">
-        <label for="name" class="d-block" i18n="@@name_invite_in_contact_form">
-          Votre nom
-        </label>
+        <label for="name" class="d-block"> Your Name </label>
         <input
           id="name"
           formControlName="name"
@@ -17,13 +15,7 @@
       </div>
 
       <div class="d-block">
-        <label
-          for="email"
-          i18n="@@email_invite_in_contact_form"
-          class="d-block"
-        >
-          Votre e-mail
-        </label>
+        <label for="email" class="d-block"> Your e-mail </label>
         <input
           id="email"
           formControlName="email"
@@ -34,12 +26,7 @@
       </div>
 
       <div class="d-block">
-        <label
-          for="subject"
-          i18n="@@subject_invite_in_contact_form"
-          class="d-block"
-          >Sujet</label
-        >
+        <label for="subject" class="d-block"> Subject </label>
         <input
           id="subject"
           formControlName="subject"
@@ -50,9 +37,7 @@
       </div>
 
       <div class="d-block">
-        <label for="message" i18n="@@message_in_contact_form" class="d-block">
-          Votre message
-        </label>
+        <label for="message" class="d-block"> Your message </label>
         <textarea
           id="message"
           formControlName="message"
@@ -63,11 +48,9 @@
       </div>
 
       <div class="d-block">
-        <span
-          class="form-extra-information"
-          i18n="@@extra_information_in_contact_form"
-          >Aucune donnée utilisateur n'est stockée. Les données collectées dans
-          le formulaire de contact ne sont pas conservées.</span
+        <span class="form-extra-information"
+          >No user data is stored. The data collected in the contact form is not
+          retained.</span
         >
       </div>
 
@@ -83,11 +66,9 @@
             class="spinner-border spinner-border-sm"
             role="status"
           >
-            <span class="visually-hidden" i18n="@@loading_text"
-              >Chargement...</span
-            >
+            <span class="visually-hidden">Loading...</span>
           </div>
-          <div *ngIf="!isLoading" i18n="@@send_message">Envoyer le message</div>
+          <div *ngIf="!isLoading">Send the message</div>
         </button>
       </div>
     </div>

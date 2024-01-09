@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
-import { TranslationService } from 'src/app/module/translation/service/translation.service';
 import { NotificationService } from 'src/app/service/notification.service';
 import { environment } from 'src/environments/environment';
 
@@ -11,8 +10,7 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./contact-us.component.scss'],
 })
 export class ContactUsComponent {
-  // formspreeSecretKey: string = environment.formspreeKey;
-  formspreeSecretKey: string = 'mwkdzkbv';
+  formspreeSecretKey: string = environment.formspreeKey;
 
   contactForm = this.formBuilder.group({
     name: new FormControl(''),
@@ -26,8 +24,7 @@ export class ContactUsComponent {
   constructor(
     private formBuilder: FormBuilder,
     private httpClient: HttpClient,
-    private notificationService: NotificationService,
-    private translationService: TranslationService
+    private notificationService: NotificationService
   ) {}
 
   sendEmail() {
@@ -35,7 +32,7 @@ export class ContactUsComponent {
       this.isLoading = true;
 
       if (!environment.allowedContactForm) {
-        throw new Error(this.translationService.getTranslation('ctf_disabled'));
+        throw new Error('Contact form disabled');
       }
 
       const name = this.contactForm.get('name')?.value;
@@ -44,17 +41,13 @@ export class ContactUsComponent {
       const message = this.contactForm.get('message')?.value;
 
       if (!name || !email || !subject || !message) {
-        throw new Error(
-          this.translationService.getTranslation('ctf_missing_data')
-        );
+        throw new Error('Missing data');
       }
 
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
       if (!emailRegex.test(email)) {
-        throw new Error(
-          this.translationService.getTranslation('ctf_invalid_email')
-        );
+        throw new Error('Invalid email');
       }
 
       let url = `https://formspree.io/f/${this.formspreeSecretKey}`;
@@ -72,10 +65,8 @@ export class ContactUsComponent {
         next: (data) => {
           this.notificationService.showNotification({
             type: 'success',
-            title: this.translationService.getTranslation('ctf_success'),
-            content: this.translationService.getTranslation(
-              'ctf_success_description'
-            ),
+            title: 'Success',
+            content: 'Message sent',
           });
           this.isLoading = false;
           this.contactForm.reset();
@@ -84,7 +75,7 @@ export class ContactUsComponent {
           this.isLoading = false;
           this.notificationService.showNotification({
             type: 'danger',
-            title: this.translationService.getTranslation('ctf_error'),
+            title: 'Error',
             content: error.message,
           });
         },
@@ -93,7 +84,7 @@ export class ContactUsComponent {
       this.isLoading = false;
       this.notificationService.showNotification({
         type: 'danger',
-        title: this.translationService.getTranslation('ctf_error'),
+        title: 'Error',
         content: error.message,
       });
     }

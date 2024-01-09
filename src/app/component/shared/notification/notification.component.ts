@@ -23,7 +23,6 @@ export class NotificationComponent implements OnInit {
   ngOnInit(): void {
     this.notificationService.notificationOption$.subscribe({
       next: (data: any) => {
-        console.log('data: ', data);
         this.notificationOption = {
           ...this.notificationOption,
           ...data,
