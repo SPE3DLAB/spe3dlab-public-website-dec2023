@@ -22,6 +22,8 @@ import { ImageWithTextWrapComponent } from './component/shared/image-with-text-w
 import { PartnersPageComponent } from './component/page/partners-page/partners-page.component';
 import { PublicationsComponent } from './component/page/publications/publications.component';
 import { EventsAndPressComponent } from './component/page/events-and-press/events-and-press.component';
+import { ImageWithTextBottomComponent } from './component/shared/image-with-text-bottom/image-with-text-bottom.component';
+import { ImageWithTextSideBySideComponent } from './component/shared/image-with-text-side-by-side/image-with-text-side-by-side.component';
 
 export function translationServiceFactory(
   translationService: TranslationService
@@ -42,6 +44,8 @@ export function translationServiceFactory(
     DemoVideoComponent,
     FeatureOverviewComponent,
     ImageWithTextWrapComponent,
+    ImageWithTextBottomComponent,
+    ImageWithTextSideBySideComponent,
     PartnersComponent,
     PartnersPageComponent,
     PublicationsComponent,

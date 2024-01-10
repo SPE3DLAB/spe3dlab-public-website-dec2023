@@ -1,77 +1,10 @@
-<h2 *ngIf="title" class="mb-4">{{ title }}</h2>
-<div class="row g-5">
-  <div
-    class="d-flex justify-content-center align-items-center"
-    [class]="forceImageOnTop ? 'col-12 ' : 'col-12 col-md-5 col-lg-3'"
-    [ngClass]="swapTextAndImage ? 'order-2' : 'order-1'"
-  >
-    <img
-      *ngIf="imageSource"
-      [src]="imageSource"
-      [alt]="imageName"
-      [ngStyle]="{ height: imageHeight, width: imageWidth }"
-      [ngClass]="imageWrapperClass"
-    />
+<div class="row p-4">
+  <div class="clearfix">
+      <img [src]="imageSource" class="col-12 col-md-5 float-md-start mb-3 me-3" [alt]="imageName">
 
-    <div
-      *ngIf="imageSources.length > 0"
-      [id]="carouselId"
-      class="carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-indicators">
-        <button
-          *ngFor="let itemImageSource of imageSources; index as index"
-          type="button"
-          [attr.data-bs-target]="'#' + carouselId"
-          [attr.data-bs-slide-to]="index"
-          [class]="index == 0 ? 'active' : ''"
-          [attr.aria-current]="index == 0 ? 'true' : null"
-          [attr.aria-label]="'Slide ' + index"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div
-          *ngFor="let itemImageSource of imageSources; index as index"
-          class="carousel-item"
-          data-bs-interval="5000"
-          [ngClass]="index == 0 ? 'active' : ''"
-        >
-          <img
-            [src]="itemImageSource.imageSource"
-            class="d-block w-100"
-            [alt]="itemImageSource.imageName"
-            [ngStyle]="{ maxHeight: imageHeight, maxWidth: imageWidth }"
-            [ngClass]="imageWrapperClass"
-          />
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        [attr.data-bs-target]="'#' + carouselId"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        [attr.data-bs-target]="'#' + carouselId"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <h1>{{title}}</h1>
+
+      <div [innerHTML]="content"></div>
+
     </div>
-  </div>
-  <div
-    [class]="forceImageOnTop ? 'col-12 ' : 'col-12 col-md-7 col-lg-9'"
-    [ngClass]="swapTextAndImage ? 'order-1' : 'order-2'"
-  >
-    <h2>{{ subTitle }}</h2>
-
-    <ng-content></ng-content>
-  </div>
 </div>
