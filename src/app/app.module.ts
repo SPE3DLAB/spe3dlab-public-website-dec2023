@@ -18,7 +18,6 @@ import { OtherTranslationsComponent } from './component/shared/other-translation
 import { PartnersComponent } from './component/shared/partners/partners.component';
 import { DemoVideoComponent } from './component/shared/demo-video/demo-video.component';
 import { FeatureOverviewComponent } from './component/shared/feature-overview/feature-overview.component';
-import { ImageWithTextWrapComponent } from './component/shared/image-with-text-wrap/image-with-text-wrap.component';
 import { PartnersPageComponent } from './component/page/partners-page/partners-page.component';
 import { PublicationsComponent } from './component/page/publications/publications.component';
 import { EventsAndPressComponent } from './component/page/events-and-press/events-and-press.component';
@@ -43,7 +42,6 @@ export function translationServiceFactory(
     PartnersComponent,
     DemoVideoComponent,
     FeatureOverviewComponent,
-    ImageWithTextWrapComponent,
     ImageWithTextBottomComponent,
     ImageWithTextSideBySideComponent,
     PartnersComponent,
