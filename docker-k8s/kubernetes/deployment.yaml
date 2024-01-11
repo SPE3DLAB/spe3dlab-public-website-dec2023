@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spe3dlab-public-website-server-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spe3dlab-public-website-server-nginx-pod
+  template:
+    metadata:
+      labels:
+        app: spe3dlab-public-website-server-nginx-pod
+    spec:
+      containers:
+      - name: spe3dlab-public-website-server-nginx
+        #image: spe3dlab-public-website-server-nginx:latest
+        image: ghcr.io/spe3dlab/spe3dlab-public-website-server-nginx:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+      - name: ghcr-secret

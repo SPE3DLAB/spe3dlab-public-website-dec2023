@@ -1,0 +1,56 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    kubernetes.io/ingress.class: nginx
+  name: spe3dlab-public-website-server-nginx-ingress
+spec:
+  tls:
+    - hosts:
+      - spe3dlab.org
+      - www.spe3dlab.org
+      - speedlab.io
+      - www.speedlab.io
+      secretName: spe3dlab.org-tls
+  rules:
+  - host: spe3dlab.org
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: spe3dlab-public-website-server-nginx-svc
+            port:
+              number: 80
+  - host: www.spe3dlab.org
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: spe3dlab-public-website-server-nginx-svc
+            port:
+              number: 80
+  - host: speedlab.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: spe3dlab-public-website-server-nginx-svc
+            port:
+              number: 80
+  - host: www.speedlab.io
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: spe3dlab-public-website-server-nginx-svc
+            port:
+              number: 80

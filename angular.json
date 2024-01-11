@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "speedlab-public-website": {
+    "spe3dlab-public-website": {
       "projectType": "application",
       "i18n": {
         "sourceLocale": "en",
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/speedlab-public-website",
+            "outputPath": "dist/spe3dlab-public-website",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -47,7 +47,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumError": "40kb"
                 }
               ],
               "outputHashing": "all",
@@ -68,7 +68,7 @@
             },
             "en": {
               "aot": true,
-              "outputPath": "dist/speedlab-public-website-en/",
+              "outputPath": "dist/spe3dlab-public-website-en/",
               "baseHref": "/",
               "localize": ["en"],
               "i18nMissingTranslation": "error",
@@ -87,7 +87,7 @@
               "sourceMap": true,
               "namedChunks": true,
               "aot": true,
-              "outputPath": "dist/speedlab-public-website-en/",
+              "outputPath": "dist/spe3dlab-public-website-en/",
               "baseHref": "/",
               "localize": ["en"],
               "i18nMissingTranslation": "error",
@@ -105,17 +105,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "speedlab-public-website:build:production"
+              "browserTarget": "spe3dlab-public-website:build:production"
             },
             "development": {
-              "browserTarget": "speedlab-public-website:build:development",
+              "browserTarget": "spe3dlab-public-website:build:development",
               "port": 4200
             },
             "en": {
-              "browserTarget": "speedlab-public-website:build:en"
+              "browserTarget": "spe3dlab-public-website:build:en"
             },
             "development-en": {
-              "browserTarget": "speedlab-public-website:build:development-en",
+              "browserTarget": "spe3dlab-public-website:build:development-en",
               "port": 4300
             }
           },
@@ -124,7 +124,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "speedlab-public-website:build"
+            "browserTarget": "spe3dlab-public-website:build"
           }
         },
         "test": {

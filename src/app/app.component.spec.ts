@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'speedlab-public-website'`, () => {
+  it(`should have as title 'spe3dlab-public-website'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('speedlab-public-website');
+    expect(app.title).toEqual('spe3dlab-public-website');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('speedlab-public-website app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('spe3dlab-public-website app is running!');
   });
 });

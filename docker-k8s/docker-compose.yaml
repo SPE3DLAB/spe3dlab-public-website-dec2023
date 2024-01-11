@@ -1,0 +1,7 @@
+version: '3'
+services:
+  spe3dlab-public-website-server-nginx:
+    build: .
+    ports:
+      - "80:80"
+    image: spe3dlab-public-website-server-nginx:latest
